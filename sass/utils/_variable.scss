@@ -1,9 +1,40 @@
+/* ПЕРЕМЕННЫЕ - в виде КАРТЫ */
+$colors: (
+'main-text': #757575,
+'second-text': #212121,
+'acsent': #2196f3,
+'main-white': #ffffff,
+'background-grey': #2f303a,
+'background-section': #f5f4fa,
+'main-black': #000000,
+'text-footer-tel': rgba(255, 255, 255, 0.6),
+'stroke-index': #ececec,
+'stroke-portfolio': #eeeeee,
+'stroke-client': #afb1b8,
+);
 
 
+/* Функция получения цвета из карты */ 
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
 
+/*========================================*/ 
+/* ПЕРЕМЕННЫЕ - в виде SACC-переменных */ 
+$main-text-color: #757575;
+$second-text-color: #212121;
+$acsent-color: #2196f3;
+$main-white-color: #ffffff;
+$background-grey-color: #2f303a;
+$background-section-color: #f5f4fa;
+$main-black-color: #000000;
+$text-footer-tel-color: rgba(255, 255, 255, 0.6);
+$stroke-index-color: #ececec;
+$stroke-portfolio-color: #eeeeee;
+$stroke-client-color: #afb1b8;
 
-// Были в виде CSS-переменных
-
+/*========================================*/
+/* ПЕРЕМЕННЫЕ - в виде CSS-переменных */
 /* :root - специфичный аналог селектора <html> в CSS*/
 /* Указываются */
 /* CSS-переменные (кастомные свойства) */

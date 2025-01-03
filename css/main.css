@@ -9,7 +9,7 @@ body {
   padding-top: 80px;
   /* Обнуление внешних отступов для тела сайта */
   margin: 0px;
-  background-color: var(--main-white-color);
+  background-color: getColor("main-white");
   color: var(--main-text-color);
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -67,6 +67,12 @@ p {
 }
 
 /* Переменные */
+/* ПЕРЕМЕННЫЕ - в виде КАРТЫ */
+/* Функция получения цвета из карты */
+/*========================================*/
+/* ПЕРЕМЕННЫЕ - в виде SACC-переменных */
+/*========================================*/
+/* ПЕРЕМЕННЫЕ - в виде CSS-переменных */
 /* :root - специфичный аналог селектора <html> в CSS*/
 /* Указываются */
 /* CSS-переменные (кастомные свойства) */
@@ -1364,7 +1370,7 @@ p {
 }
 
 /* Заголовок модального окна */
-.form-title {
+.form-modal__title {
   text-align: center;
   /* Шрифт  */
   font-family: inherit;
@@ -1377,12 +1383,12 @@ p {
 }
 
 /* Контейнер для всех полей ввода, кроме условий */
-.form-inputs {
+.form-modal__inputs {
   margin-bottom: 20px;
 }
 
 /* Поля ввода (label+input) */
-.form-field {
+.form-modal__field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1394,7 +1400,7 @@ p {
 }
 
 /* Поля ввода - метки - label */
-.form-field label {
+.form-modal__label {
   margin-bottom: 4px;
   /* Шрифт  */
   font-family: inherit;
@@ -1407,7 +1413,7 @@ p {
 }
 
 /* Поля ввода - input */
-.form-field input {
+.form-modal__input {
   width: 100%;
   padding-top: 11px;
   padding-bottom: 11px;
@@ -1425,7 +1431,7 @@ p {
 }
 
 /* Поля ввода - input - при  :focus*/
-.form-field input:focus {
+.form-modal__input:focus {
   /* Выключаем свойство outline:, которое автоматически при фокусе на элемент */
   outline: none;
   /* Меняем цвет рамки */
@@ -1433,13 +1439,13 @@ p {
 }
 
 /* Контейнер для поля input (для вставки иконки) */
-.thumb-input {
+.form-modal__thumb-input {
   display: block;
   position: relative;
 }
 
 /* Иконка в input  */
-.thumb-input .icon {
+.form-modal__thumb-input .icon {
   display: block;
   margin: 0;
   /* Даем абсолютное позиционирование */
@@ -1453,18 +1459,18 @@ p {
   fill: var(--second-text-color);
 }
 
-.thumb-input input:focus + .icon {
+.form-modal__input:focus + .icon {
   fill: var(--acsent-color);
 }
 
 /* Поле - Комментарии */
-.form-modal .comment {
+.form-modal__comment {
   padding: 12px 16px;
   /* Запрет на изменение размера поля с комментариями */
   resize: none;
 }
 
-.form-modal .comment::-webkit-input-placeholder {
+.form-modal__comment::-webkit-input-placeholder {
   /* Шрифт  */
   font-family: inherit;
   font-weight: 400;
@@ -1475,7 +1481,7 @@ p {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-modal .comment::-moz-placeholder {
+.form-modal__comment::-moz-placeholder {
   /* Шрифт  */
   font-family: inherit;
   font-weight: 400;
@@ -1486,7 +1492,7 @@ p {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-modal .comment:-ms-input-placeholder {
+.form-modal__comment:-ms-input-placeholder {
   /* Шрифт  */
   font-family: inherit;
   font-weight: 400;
@@ -1497,7 +1503,7 @@ p {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-modal .comment::-ms-input-placeholder {
+.form-modal__comment::-ms-input-placeholder {
   /* Шрифт  */
   font-family: inherit;
   font-weight: 400;
@@ -1508,7 +1514,7 @@ p {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-modal .comment::placeholder {
+.form-modal__comment::placeholder {
   /* Шрифт  */
   font-family: inherit;
   font-weight: 400;
@@ -1520,7 +1526,7 @@ p {
 }
 
 /* Поля ввода - textarea - при  :focus*/
-.form-field .comment:focus {
+.form-modal__comment:focus {
   /* Выключаем свойство outline:, которое автоматически при фокусе на элемент */
   outline: none;
   /* Меняем цвет рамки */
@@ -1528,7 +1534,7 @@ p {
 }
 
 /* Отметка о принятии условий */
-.form-modal .field-policy {
+.form-modal__field-policy {
   /* Делаем флекс для иконки и текста и выравниваем по вертикали */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1544,7 +1550,7 @@ p {
   margin-bottom: 30px;
 }
 
-.form-modal .label-policy {
+.form-modal__label-policy {
   /* Шрифт метки */
   font-family: inherit;
   font-weight: 400;
@@ -1556,12 +1562,12 @@ p {
 }
 
 /* Ссылка на условия договора */
-.form-modal .label-policy a {
+.form-modal__label-policy a {
   color: var(--acsent-color);
 }
 
 /* Иконка метки принятия условий */
-.checkbox-input {
+.form-modal__checkbox-input {
   /* Убираем стандартный квадратик от браузера */
   /* Новое свойство : */
   -webkit-appearance: none;
@@ -1571,7 +1577,7 @@ p {
 }
 
 /* Пользовательская иконка checkbox в невыбранном состоянии */
-.checkbox-icon {
+.form-modal__checkbox-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -1581,12 +1587,12 @@ p {
 }
 
 /* Замена иконки, если input:checked - выбран */
-.checkbox-input:checked + .checkbox-icon {
+.form-modal__checkbox-input:checked + .form-modal__checkbox-icon {
   background-image: url(../icon/0-svg-original/check-1.svg);
 }
 
 /* Кнопка  */
-.form-modal .button-submit {
+.form-modal__button-submit {
   /* Центрирование блока */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1627,13 +1633,13 @@ p {
           transition-duration: 250ms;
 }
 
-.form-modal .button-submit:hover,
-.form-modal .button-submit:focus {
+.form-modal__button-submit:hover,
+.form-modal__button-submit:focus {
   /* Новое свойство : */
   color: var(--main-black-color);
 }
 
-.form-modal .button-close {
+.form-modal__button-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -1657,7 +1663,7 @@ p {
   cursor: pointer;
 }
 
-.form-modal .icon-close {
+.form-modal__icon-close {
   /* Изображение делаем блочным элементом */
   display: block;
   /* Убираем наружные отступы */
@@ -1667,12 +1673,12 @@ p {
 }
 
 /* События при кнопке закрытия модального окна */
-.form-modal .button-close:hover {
+.form-modal__button-close:hover {
   /* Меняется цвет фона */
   background-color: var(--acsent-color);
 }
 
-.form-modal .button-close:hover .icon-close {
+.form-modal__button-close:hover .form-modal__icon-close {
   /* Меняется цвет иконки */
   fill: var(--main-white-color);
 }/*# sourceMappingURL=main.css.map */

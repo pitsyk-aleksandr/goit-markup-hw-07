@@ -159,24 +159,30 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     /* - время перехода */
     transition-duration: 250ms;
+
+    /* Оформление иконки кнопки "Подписаться" в футере */
+    & .icon {
+        margin-left: 10px;
+        fill: var(--main-white-color);
+    }
+
+    /* При :hover/:focus на кнопку - меняются цвета*/ 
+    &:hover,
+    &:focus {
+        /* Новое свойство : */
+        color: var(--main-black-color);
+        background-color: var(--main-white-color);
+    }
+
+    /* /* При :hover/:focus на кнопку - Изменение фона иконки кнопки */
+    &:hover .icon,
+    &:focus .icon {
+        /* Новое свойство : */
+        fill: var(--acsent-color);
+    }
 }
 
-/* Оформление иконки кнопки "Подписаться" в футере */
-.newsletter__button .icon {
-    margin-left: 10px;
-    fill: var(--main-white-color);
-}
 
-.newsletter__button:hover,
-.newsletter__button:focus {
-    /* Новое свойство : */
-    color: var(--main-black-color);
-    background-color: var(--main-white-color);
-}
 
-/* Изменение фона иконки кнопки */
-.newsletter__button:hover .icon,
-.newsletter__button:focus .icon {
-    /* Новое свойство : */
-    fill: var(--acsent-color);
-}
+
+
